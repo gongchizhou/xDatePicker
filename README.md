@@ -10,7 +10,7 @@ $(el).xDatePicker([options]);
 ## Demo
 
 效果演示地址
-Check the [demo]().
+Check the [https://gongchizhou.github.io/xDatePicker/]().
 
 ### 参数设置
 
