@@ -1,0 +1,166 @@
+.xp{
+    position: relative;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.xp-inner-wrap{
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.xp-inner{
+    width: 100%;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.xp ul{
+    overflow: hidden;
+}
+
+.xp .range-wrap{
+    display: table;
+}
+
+.xp .range{
+    background: #f5f5f5;
+    display: table-row;
+}
+
+.xp .range li.active{
+    position: relative;
+    color: #333;
+    font-weight: bold;
+}
+
+.xp .range li.active:after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 20px;
+    height: 2px;
+    margin-left: -10px;
+    background: #333;
+}
+
+.xp .select-box{
+    width: 100px;
+}
+
+.xp .select{
+    width: 100px;
+    position: absolute;
+    right: 1px;
+    top: 0;
+    cursor: pointer;
+    background: #fff;
+    z-index: 1;
+}
+
+.xp .select:after{
+    content: '';
+    position: absolute;
+    right: 10px;
+    top: 18px;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+    vertical-align: middle;
+    border-color: #666;
+    border-top: 4px dashed;
+    border-top: 4px solid \9;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+}
+
+.xp .select li, .xp .select button{
+    width: 100%;
+    background: #fff;
+}
+
+.xp .select ul{
+    width: 100%;
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 120%;
+    border: 1px solid #eee;
+    box-sizing: border-box;
+}
+
+.xp .select li{
+    display: block;
+}
+
+.xp .select button {
+    padding: 10px;
+    margin-top: 1px;
+    height: 38px;
+    border: none;
+    box-sizing: border-box;
+    outline: 1px solid #eee;
+    cursor: pointer;
+}
+
+.xp ul li{
+    display: table-cell;
+    padding: 10px;
+    height: 40px;
+    text-align: center;
+    cursor: pointer;
+    background: #f5f5f5;
+    box-sizing: border-box;
+}
+
+.xp .prev, .xp .next{
+    position: absolute;
+    top: 0;
+    width: 20px;
+    height: 100%;
+    cursor: pointer;
+    background: #fff;
+    border: 1px solid #eee;
+    box-sizing: border-box;
+}
+.xp .prev:hover, .xp .next:hover{
+    background: #eee;
+}
+.xp .prev{
+    left: 0;
+}
+.xp .next{
+    right: 0;
+}
+
+.xp .prev:after, .xp .next:after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 6px;
+    height: 6px;
+    margin-top: -3px;
+    margin-left: -2px;
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+    border-top: 2px solid #333;
+    border-right: 2px solid #333;
+}
+
+.xp .next:after{
+    margin-left: -5px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+.xp .not-allowed{
+    cursor: not-allowed;
+}
+
+.xp .not-allowed:hover{
+    background: #fff;
+}

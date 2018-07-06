@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Demo</title>
+    <link rel="stylesheet" href="./src/xDatePicker.css">
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    section{
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 60px 0;
+        box-sizing: border-box;
+    }
+    article{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 1140px;
+        margin:  0 auto;
+    }
+    article pre{
+        width: 30%;
+        padding: 30px;
+        font-size: 14px;
+        color: #a1e0ff;
+        box-sizing: border-box;
+        background: #333;
+    }
+    article div{
+        width: 60%;
+    }
+</style>
+</head>
+
+<body>
+    <section>
+        <article>
+            <pre>$('#first').xDatePicker()
+.on('date.apply',function(e,data){
+    alert(data.start + '至' + data.end)
+})
+            </pre>
+            <div id="first"></div>
+        </article>
+        <article>
+            <pre>$('#second').xDatePicker({
+    range: 'year',
+    limit: 10
+}).on('date.apply',function(e,data){
+    alert(data.start)
+})
+            </pre>
+            <div id="second"></div>
+        </article>
+        <article>
+            <pre>$('#third').xDatePicker({
+    range: ['season', 'month']
+}).on('date.apply',function(e,data){
+    alert(data.start + '至' + data.end)
+})
+            </pre>
+            <div id="third"></div>
+        </article>
+    </section>
+    <script src="./lib/jquery.min.js"></script>
+    <script src="./src/xDatePicker.js"></script>
+    <script>
+        $(function(){
+            $('#first').xDatePicker()
+            .on('date.apply',function(e,data){
+                alert(data.start + '至' + data.end)
+            });
+            $('#second').xDatePicker({
+                range: 'year',
+                limit: 10
+            }).on('date.apply',function(e,data){
+                alert(data.start)
+            });
+            $('#third').xDatePicker({
+                range: ['season', 'month']
+            }).on('date.apply',function(e,data){
+                alert(data.start + '至' + data.end)
+            })
+        })
+    </script>
+</body>
+
+</html>
